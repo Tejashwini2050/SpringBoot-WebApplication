@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdffb6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: white; /* Gold color */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px 0;
+}
+
+section#home {
+    background-color: light blue;
+    text-align: center;
+    color: #333;
+}
+
+section#services {
+    background-color: light blue; /* Linen color */
+    text-align: center;
+}
+
+section#services .service {
+    background-color: light blue;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section#about {
+    background-color: light blue; /* Light cyan */
+    text-align: center;
+}
+
+section#contact {
+    background-color: light blue; /* Lavender blush */
+    text-align: center;
+}
+
+footer {
+    background-color: light blue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
