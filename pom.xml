@@ -75,6 +75,8 @@
                 <configuration>
                     <format>XML</format>
                     <outputDirectory>${project.build.directory}</outputDirectory>
+                    <cve.startYear>2002</cve.startYear>
+                    <connectionTimeout>600000</connectionTimeout>
                 </configuration>
             </plugin>
         </plugins>
