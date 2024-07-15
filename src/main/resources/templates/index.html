@@ -1,25 +1,144 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
-    <link data-th-href="@{/css/main.css?{id}(id=${timestamp})}" rel="stylesheet">
-    <title>Build & Deploy SpringBoot Based Static Web Application</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Clinic</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1>Pet Clinic</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">CI CD DevOps Project</div></a>
-</nav>
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to Pet Clinic</h2>
+            <p>Your pet's health is our priority. We provide the best care for your furry friends.</p>
+            <img src="C:\Users\Admin\Downloads\11 Reasons Why Dogs Really Are A Girl's Best Friend.jfif" alt="Pet Clinic">
+        </div>
+    </section>
 
-<main role="main" class="container">
-    <div class="starter-template">
-        <h1 th:text="${title}">Default title.</h1>
-        <p th:text="${msg}">Default text.</p>
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Vaccinations</h3>
+                <p>Keep your pet healthy with our vaccination services.</p>
+                <img src="C:\Users\Admin\Downloads\dog.jfif" alt="Vaccinations">
+            </div>
+            <div class="service">
+                <h3>Check-ups</h3>
+                <p>Regular check-ups to ensure your pet's well-being.</p>
+                <img src="C:\Users\Admin\Downloads\Rufous-bellied Thrush.jfif" alt="Check-ups">
+            </div>
+            <div class="service">
+                <h3>Surgery</h3>
+                <p>We offer a range of surgical services for your pet.</p>
+                <img src="C:\Users\Admin\Downloads\5 Spiritual Lessons We Learn From Cats _ Spirituality+Health.jfif" alt="Surgery">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a team of dedicated professionals committed to providing the best care for your pets.</p>
+            <img src="https://petbizindia.com/wp-content/uploads/2024/02/Team-Blue-7-scaled.jpg" alt="About Us">
+        </div>
+    </section>
+
+
+    <title>Pet Clinic Appointment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdffb6;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="tel"], input[type="date"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <div class="container">
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label for="exampleInputName">Name</label>
+                <input type="text" id="exampleInputName" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPhone">Phone Number</label>
+                <input type="tel" id="exampleInputPhone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputAnimal">Animal Type</label>
+                <select id="exampleInputAnimal" name="animalType">
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputBreed">Breed</label>
+                <input type="text" id="exampleInputBreed" name="breed" placeholder="Enter the breed of your pet">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputDate">Appointment Date</label>
+                <input type="date" id="exampleInputDate" name="appointmentDate" required>
+            </div>
+            <button type="submit">Schedule Appointment</button>
+        </form>
     </div>
-</main>
 
-<script data-th-src="@{/js/main.js}"></script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pet Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="Scripts.js"></script>
 </body>
-
 </html>
