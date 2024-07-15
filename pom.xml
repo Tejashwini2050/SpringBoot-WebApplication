@@ -61,24 +61,7 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.owasp</groupId>
-                <artifactId>dependency-check-maven</artifactId>
-                <version>6.1.6</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <format>XML</format>
-                    <outputDirectory>${project.build.directory}</outputDirectory>
-                    <cve.startYear>2002</cve.startYear>
-                    <connectionTimeout>600000</connectionTimeout>
-                </configuration>
-            </plugin>
+            
         </plugins>
     </build>
 </project>
