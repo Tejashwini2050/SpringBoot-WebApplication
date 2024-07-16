@@ -61,7 +61,25 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-            
+            <plugin>
+            <groupId>org.owasp</groupId>
+            <artifactId>dependency-check-maven</artifactId>
+            <version>6.1.6</version> <!-- Use the appropriate version -->
+            <configuration>
+                <format>HTML</format> <!-- Report format: HTML, XML, JSON, CSV, etc. -->
+                <outputDirectory>dependency-check-report</outputDirectory> <!-- Output directory for the report -->
+                <failOnError>true</failOnError>
+                <cveRetryCount>5</cveRetryCount>
+                <cveRetryDelay>10000</cveRetryDelay>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>check</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
         </plugins>
     </build>
 </project>
